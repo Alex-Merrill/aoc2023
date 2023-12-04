@@ -64,7 +64,7 @@ def main():
     lines = []
     with open("input.txt") as f:
         for line in f:
-            lines.append(line)
+            lines.append(line.strip())
     print(part1(lines))
     print(part2(lines))
 
