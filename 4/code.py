@@ -1,8 +1,7 @@
 def part1(lines):
     sum = 0
     for line in lines:
-        game_id, game_data = line.split(":")
-        _, game_id = game_id.split()
+        _, game_data = line.split(":")
         winning_nums, my_nums = game_data.split("|")
         winning_nums = set(winning_nums.split())
         my_nums = set(my_nums.split())
@@ -13,23 +12,18 @@ def part1(lines):
 
 
 def part2(lines):
-    total_scratchcards = 0
     copies = [1] * len(lines)
     for i, line in enumerate(lines):
-        game_id, game_data = line.split(":")
-        _, game_id = game_id.split()
+        _, game_data = line.split(":")
         winning_nums, my_nums = game_data.split("|")
         winning_nums = set(winning_nums.split())
         my_nums = set(my_nums.split())
         num_wins = len(my_nums.intersection(winning_nums))
 
-        for j in range(i+1, i+1+num_wins):
+        for j in range(i+1, min(i+1+num_wins, len(lines))):
             copies[j] += copies[i]
         
-        total_scratchcards += copies[i]
-
-
-    return total_scratchcards
+    return sum(copies)
 
 
 def main():
