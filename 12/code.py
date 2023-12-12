@@ -1,8 +1,4 @@
-import functools
-import sys
 import time
-
-sys.setrecursionlimit(10000)
 
 
 def solve(s, groups):
