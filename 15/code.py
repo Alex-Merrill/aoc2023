@@ -1,3 +1,4 @@
+import os
 def hash(word):
     val = 0
     for c in word:
@@ -46,7 +47,7 @@ def part2(words):
 
 
 def main():
-    inpt = open("input.txt").read().strip()
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip()
     words = inpt.split(",")
 
     print(f"part 1: {part1(words)}")

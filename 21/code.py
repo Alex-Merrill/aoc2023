@@ -1,3 +1,4 @@
+import os
 from collections import deque
 
 
@@ -50,7 +51,7 @@ def calc_steps(visited, parity):
 
 
 def main():
-    lines = open("input.txt").read().strip().splitlines()
+    lines = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     grid = [[c for c in r] for r in lines]
     for i in range(len(grid)):
         for j in range(len(grid[0])):

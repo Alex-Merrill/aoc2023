@@ -1,3 +1,4 @@
+import os
 import time
 
 
@@ -110,7 +111,7 @@ def get_mappings(lines, part2=False):
 
 def main():
     lines = []
-    with open("input.txt") as f:
+    with open(f"{os.path.dirname(__file__)}/input.txt") as f:
         for line in f:
             lines.append(line.strip())
     print(part1(lines))

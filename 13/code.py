@@ -1,3 +1,4 @@
+import os
 def row_sym(pattern, diffs_req=0):
     for i in range(len(pattern) - 1):
         total_diffs = 0
@@ -13,7 +14,7 @@ def row_sym(pattern, diffs_req=0):
 
 
 def main():
-    patterns = open("input.txt").read().strip().split("\n\n")
+    patterns = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().split("\n\n")
     patterns = [pattern.split("\n") for pattern in patterns]
 
     p1_ans = 0

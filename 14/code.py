@@ -1,3 +1,4 @@
+import os
 import time
 
 
@@ -91,7 +92,7 @@ def transpose(g):
 
 
 def main():
-    inpt = open("input.txt").read().strip().splitlines()
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     rows = [list(row) for row in inpt]
 
     t = time.perf_counter()

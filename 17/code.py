@@ -1,3 +1,4 @@
+import os
 import heapq
 
 
@@ -47,7 +48,7 @@ def solve(grid, min_straight=0, max_straight=3):
 
 
 def main():
-    inpt = open("input.txt").read().strip().splitlines()
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     grid = [[int(c) for c in row] for row in inpt]
 
     p1_ans = solve(grid)

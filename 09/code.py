@@ -1,3 +1,4 @@
+import os
 def part1(seq):
     lines = [seq]
     seq_i = 0
@@ -48,7 +49,7 @@ def part2(seq):
 
 def main():
     inpt = [
-        line.split() for line in open("input.txt").read().strip().split("\n")
+        line.split() for line in open(f"{os.path.dirname(__file__)}/input.txt").read().strip().split("\n")
     ]
     seqs = [[int(x) for x in seq] for seq in inpt]
     predictions = []

@@ -1,4 +1,5 @@
 import math
+import os
 import re
 
 
@@ -84,15 +85,15 @@ def main():
     In this case, the minimum steps is 3, but using the LCM on the first
 
     """
-    inpt = open("test.txt").read().strip()
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip()
     dirs, graph = inpt.split("\n\n")
     dirs = [0 if c == "L" else 1 for c in dirs]
     graph = make_graph(graph.split("\n"))
 
     print("Part 1:")
-    # prit(
-    #     f"{solve1(dirs, graph, 'AAA')} steps are required to reach ZZZ from AAA"
-    # )
+    print(
+        f"{solve1(dirs, graph, 'AAA')} steps are required to reach ZZZ from AAA"
+    )
     print("------------------")
 
     mults = [

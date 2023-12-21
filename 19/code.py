@@ -1,3 +1,4 @@
+import os
 from collections import deque
 
 
@@ -78,7 +79,7 @@ def combs(ranges):
 
 
 def main():
-    rules, parts = open("input.txt").read().strip().split("\n\n")
+    rules, parts = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().split("\n\n")
     rules = {
         rule.split("{")[0]: rule.split("{")[1][:-1].split(",")
         for rule in rules.splitlines()

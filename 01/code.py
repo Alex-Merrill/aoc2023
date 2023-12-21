@@ -1,3 +1,4 @@
+import os
 import re
 
 
@@ -12,7 +13,7 @@ def part1(lines):
                 n += line[l]
                 break
             l += 1
-        
+
         r = len(line) - 1
         while r >= l:
             if line[r].isnumeric():
@@ -20,7 +21,7 @@ def part1(lines):
                 break
             r -= 1
         sum += int(n)
-    
+
     return sum
 
 
@@ -56,13 +57,13 @@ def part2(lines):
         calibration = nums[0][1] + nums[-1][1]
 
         sum += int(calibration)
-    
+
     return sum
 
 
 def main():
     lines = []
-    with open("input.txt") as f:
+    with open(f"{os.path.dirname(__file__)}/input.txt") as f:
         for line in f:
             lines.append(line.strip())
     print(part1(lines))

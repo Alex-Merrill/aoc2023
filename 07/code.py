@@ -1,3 +1,4 @@
+import os
 import collections
 
 
@@ -73,7 +74,7 @@ def calc_strength(hand, part2=False):
 def main():
     hands = [
         (hand.split()[0], int(hand.split()[1]))
-        for hand in open("input.txt").read().strip().split("\n")
+        for hand in open(f"{os.path.dirname(__file__)}/input.txt").read().strip().split("\n")
     ]
 
     print(solve(hands))

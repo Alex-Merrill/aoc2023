@@ -1,3 +1,4 @@
+import os
 import time
 
 
@@ -57,7 +58,7 @@ def solve(s, groups):
 
 
 def main():
-    rows = open("input.txt").read().strip().splitlines()
+    rows = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     rows = [
         (row.split()[0], [int(g) for g in row.split()[1].split(",")])
         for row in rows

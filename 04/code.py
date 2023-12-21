@@ -1,3 +1,4 @@
+import os
 def part1(lines):
     sum = 0
     for line in lines:
@@ -28,7 +29,7 @@ def part2(lines):
 
 def main():
     lines = []
-    with open("input.txt") as f:
+    with open(f"{os.path.dirname(__file__)}/input.txt") as f:
         for line in f:
             lines.append(line.strip())
     print(part1(lines))

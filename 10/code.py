@@ -1,3 +1,4 @@
+import os
 import collections
 
 
@@ -107,7 +108,7 @@ def print_graph(graph):
 
 
 def main():
-    lines = open("input.txt").read().strip().splitlines()
+    lines = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     graph = [[] for _ in range(len(lines))]
     start = (-1, -1)
     for i, line in enumerate(lines):

@@ -1,3 +1,4 @@
+import os
 def solve(gals, rows_no_gal, cols_no_gal, scale):
     sum_dist = 0
     for i in range(len(gals)):
@@ -27,7 +28,7 @@ def between(val, b1, b2):
 
 
 def main():
-    inpt = open("input.txt").read().strip().split("\n")
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().split("\n")
     graph = [[c for c in line] for line in inpt]
 
     gals = []

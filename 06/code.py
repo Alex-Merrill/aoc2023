@@ -1,3 +1,4 @@
+import os
 import math
 
 
@@ -26,7 +27,7 @@ def solve(races):
 
 
 def main():
-    times, dists = open("input.txt").read().strip().split("\n")
+    times, dists = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().split("\n")
     times = times.split(":")[1].split()
     dists = dists.split(":")[1].split()
     races = [(int(t), int(d)) for t, d in zip(times, dists)]

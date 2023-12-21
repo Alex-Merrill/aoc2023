@@ -1,3 +1,4 @@
+import os
 def solve(insts):
     """
     shoelace + picks theorem
@@ -30,7 +31,7 @@ def solve(insts):
 
 
 def main():
-    inpt = open("input.txt").read().strip().splitlines()
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     insts = [(r.split()[0], int(r.split()[1])) for r in inpt]
 
     p1_ans = solve(insts)

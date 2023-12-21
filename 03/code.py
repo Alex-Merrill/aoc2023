@@ -1,3 +1,4 @@
+import os
 from collections import defaultdict
 
 
@@ -87,7 +88,7 @@ def part2(gears):
 
 def main():
     lines = []
-    with open("input.txt") as f:
+    with open(f"{os.path.dirname(__file__)}/input.txt") as f:
         for line in f:
             lines.append(line.strip())
     sum, gears = part1(lines)

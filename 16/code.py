@@ -1,3 +1,4 @@
+import os
 from collections import deque
 
 
@@ -39,7 +40,7 @@ def calc_energy(grid, start, dir):
 
 
 def main():
-    inpt = open("input.txt").read().strip().splitlines()
+    inpt = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
     grid = [[c for c in row] for row in inpt]
     R = len(grid)
     C = len(grid[0])

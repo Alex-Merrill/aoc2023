@@ -1,3 +1,4 @@
+import os
 from collections import deque
 from math import lcm
 
@@ -135,7 +136,7 @@ def part2(lines):
 
 
 def main():
-    lines = open("input.txt").read().strip().splitlines()
+    lines = open(f"{os.path.dirname(__file__)}/input.txt").read().strip().splitlines()
 
     print(f"part 1: {part1(lines)}")
 
