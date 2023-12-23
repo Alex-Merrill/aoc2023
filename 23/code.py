@@ -1,5 +1,6 @@
 import os
 import sys
+import time
 from collections import defaultdict, deque
 
 sys.setrecursionlimit(10000)
@@ -119,9 +120,13 @@ def main():
     start = (0, lines[0].index("."))
     end = (len(grid) - 1, lines[-1].index("."))
 
+    st = time.perf_counter()
     print(f"part 1: {part1(grid, start, end)}")
+    print(f"Part 1 took {time.perf_counter()-st} seconds")
 
+    st = time.perf_counter()
     print(f"part 2: {part2(grid, start,end)}")
+    print(f"Part 2 took {time.perf_counter()-st} seconds")
 
 
 main()
